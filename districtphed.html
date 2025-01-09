@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>District Phed Form</title>
+    <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        /* height: 100vh; */
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      label {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(20, 158, 183);
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: rgb(15, 130, 154);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Approval form</h1>
+      <form
+        id="phedForm"
+        action="http://localhost:5000/submit-form"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label for="districtId">District ID:</label><br />
+        <input
+          type="text"
+          id="districtId"
+          name="districtId"
+          required
+        /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="districtName">District Name:</label><br />
+        <input
+          type="text"
+          id="districtName"
+          name="districtName"
+          required
+        /><br /><br />
+
+        <label for="problem">What was the problem?</label><br />
+        <textarea id="problem" name="problem" rows="4" required></textarea
+        ><br /><br />
+
+        <label for="solution">How was it solved?</label><br />
+        <textarea id="solution" name="solution" rows="4" required></textarea
+        ><br /><br />
+
+        <label for="proof">Proof (Images):</label><br />
+        <input
+          type="file"
+          id="proof"
+          name="proof"
+          accept="image/*"
+          required
+        /><br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

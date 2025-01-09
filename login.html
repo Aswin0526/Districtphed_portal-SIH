@@ -1,0 +1,110 @@
+<!-- District phed login -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(20, 158, 183);
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: whitesmoke;
+        box-shadow: 2px 2px 8px white;
+        width: 40%;
+        height: 60%;
+        gap: 15px;
+        border-radius: 30px;
+      }
+
+      .form p {
+        color: rgb(20, 158, 183);
+        letter-spacing: 5px;
+        font-size: 30px;
+      }
+
+      .form #signin-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        position: relative;
+      }
+
+      .form #signin-form img {
+        width: 140px;
+        height: 140px;
+        border-radius: 30px;
+        /* border: 1px solid green; */
+        box-shadow: 2px 2px 10px gray;
+        object-fit: contain;
+        padding: 10px;
+        position: absolute;
+        top: -160%;
+        background-color: whitesmoke;
+        z-index: 1000;
+      }
+
+      .form #signin-form input {
+        width: 70%;
+        height: 40px;
+        border-radius: 30px;
+        padding-left: 10px;
+        border: 1px solid rgb(146, 146, 230);
+      }
+
+      .form #signin-form button {
+        background-color: rgb(20, 158, 183);
+        color: white;
+        width: 90px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        transition: all 0.3s ease-in;
+      }
+
+      .form #signin-form button:hover {
+        box-shadow: 2px 2px 10px gray;
+      }
+
+      #error-message {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <p>DISTRICT PHED LOGIN</p>
+      <form id="signin-form">
+        <img src="./jjm_new_logo.svg" alt="" />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Sign In</button>
+      </form>
+      <div id="error-message"></div>
+    </div>
+
+    <script type="module" src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+Threshold-Based Detection:
+
+A sensor system continuously measures the chlorine content in drinking water.
+If the content exceeds or falls below the set threshold, the transmitter sends the data (chlorine content, location, and kit ID) to a Firebase database via an ESP32 microcontroller.
+Automated Alerts to PHED:
+
+When a new record is added to the database, it indicates unsafe chlorine levels in drinking water for that specific location.
+An automated email alert is sent to the district’s Public Health Engineering Department (PHED), notifying them of the issue and its exact location.
+PHED Response and Resolution:
+
+PHED investigates the affected area and resolves the issue.
+After resolution, PHED is required to submit a proof document via an online form in the web application.
+Acknowledgment by Higher Authorities:
+
+The submitted form is shared with higher officials, such as the District Collector, who acknowledge the work done by PHED.
+Once acknowledged, the unresolved problem is marked as resolved in the system.

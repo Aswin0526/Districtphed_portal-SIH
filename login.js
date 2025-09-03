@@ -12,14 +12,14 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA1BtDaUDy6Qle2K0IiJihx4kbIyJoiFY0",
-  authDomain: "chlorosense-3e14d.firebaseapp.com",
-  databaseURL: "https://chlorosense-3e14d-default-rtdb.firebaseio.com/",
-  projectId: "chlorosense-3e14d",
-  storageBucket: "chlorosense-3e14d.firebasestorage.app",
-  messagingSenderId: "787916269046",
-  appId: "1:787916269046:web:3d5a6b6b3e80fa1a7ad3d7",
-  measurementId: "G-J8GCB80X6E",
+  apiKey: process.env.API,
+  authDomain: process.env.AUTHDOMAIN,
+  databaseURL: process.env.DBURL,
+  projectId: process.env.PROJID,
+  storageBucket: process.env.STORAGEBUC,
+  messagingSenderId: process.env.MSGID,
+  appId: process.env.APPID,
+  measurementId: process.env.MID,
 };
 
 const app = initializeApp(firebaseConfig);

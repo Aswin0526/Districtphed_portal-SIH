@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
 const axios = require("axios");
+require("dotenv").config();
 
 const app = express();
 const PORT = 5000;
@@ -74,7 +75,7 @@ app.post("/submit-form", upload.single("proof"), async (req, res) => {
       service: "gmail",
       auth: {
         user: "sec23cs156@sairamtap.edu.in",
-        // pass: password, User password
+        pass: process.env.GMAIL_PASSWORD,
       },
     });
 
@@ -117,7 +118,7 @@ app.post("/submit-form", upload.single("proof"), async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "form.html"));
+  res.sendFile(path.join(__dirname, "login.html"));
 });
 
 app.listen(PORT, () => {
